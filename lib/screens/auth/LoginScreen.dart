@@ -20,7 +20,6 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
-    print('ViewInsetst:${MediaQuery.of(context).viewInsets.bottom}');
     isKeyboardVisible =
         MediaQuery.of(context).viewInsets.bottom > 0 ? true : false;
     return SafeArea(
@@ -56,7 +55,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   width: isKeyboardVisible ? 100.h : 200.0.h,
                 ),
               ),
-              SizedBox(height: spaceM.h * 2.h),
+              SizedBox(height: spaceM.h),
               Align(
                 alignment: Alignment.topLeft,
                 child: Padding(
@@ -74,10 +73,11 @@ class _LoginScreenState extends State<LoginScreen> {
                               fontFamily: '.SF UI Display',
                             ),
                       ),
-                      SizedBox(height: spaceS.h * 2.h),
+                      SizedBox(height: spaceS.h),
                       CustomTextField(
                           labelText: "Email",
                           hintText: "name@domain.com",
+                          keyboardType: TextInputType.emailAddress,
                           onChanged: (value) {
                             setState(() {
                               email = value;
@@ -115,7 +115,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                         ],
                       ),
-                      SizedBox(height: spaceS.h * 3.h),
+                      SizedBox(height: spaceS.h * 2.h),
                       GestureDetector(
                         onTap: () {
                           //TODO: Navigate to phone verification screen

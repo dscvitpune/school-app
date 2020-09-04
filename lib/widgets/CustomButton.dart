@@ -9,6 +9,8 @@ class CustomButton extends StatelessWidget {
   final Color textColor;
   final Color borderColor;
   final Widget icon;
+  final EdgeInsetsGeometry padding;
+  final double fontSize, width;
 
   const CustomButton({
     Key key,
@@ -18,18 +20,21 @@ class CustomButton extends StatelessWidget {
     this.textColor,
     this.borderColor,
     this.icon,
+    this.padding,
+    this.fontSize,
+    this.width,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return ConstrainedBox(
       constraints: BoxConstraints(
-        minWidth: (MediaQuery.of(context).size.width - (8 * spaceM.w)),
+        minWidth: width ?? (MediaQuery.of(context).size.width - (8 * spaceM.w)),
       ),
       child: FlatButton(
         onPressed: onPressed,
         color: backgroundColor != null ? backgroundColor : Colors.transparent,
-        padding: EdgeInsets.all((paddingM - paddingS / 2).w),
+        padding: padding ?? EdgeInsets.all((paddingM - paddingS / 2).w),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8.0.w),
           side: BorderSide(
@@ -51,7 +56,7 @@ class CustomButton extends StatelessWidget {
                     style: Theme.of(context).textTheme.subtitle2.copyWith(
                           color: textColor != null ? textColor : white,
                           fontWeight: FontWeight.w500,
-                          fontSize: 16.0.ssp,
+                          fontSize: fontSize ?? 16.0.ssp,
                           fontFamily: '.SF UI Text',
                         ),
                   ),
@@ -62,7 +67,7 @@ class CustomButton extends StatelessWidget {
                 style: Theme.of(context).textTheme.subtitle2.copyWith(
                       color: textColor != null ? textColor : white,
                       fontWeight: FontWeight.w500,
-                      fontSize: 16.0.ssp,
+                      fontSize: fontSize ?? 16.0.ssp,
                       fontFamily: '.SF UI Text',
                     ),
               ),
