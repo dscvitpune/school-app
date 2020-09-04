@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:schoolApp/screens/auth/LoginScreen.dart';
 import 'package:schoolApp/utils/constant.dart';
 
 void main() {
   runApp(MaterialApp(
-      title: 'Budget Tracker',
+      title: 'School App',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: primaryMaterialColor,
@@ -17,7 +18,7 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    ScreenUtil.init(context, width: 392, height: 850, allowFontScaling: true);
+    ScreenUtil.init(context, width: 414, height: 736, allowFontScaling: true);
     print('Width: ${MediaQuery.of(context).size.width}');
     print('Height: ${MediaQuery.of(context).size.height}');
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
@@ -25,6 +26,6 @@ class MyApp extends StatelessWidget {
         systemNavigationBarColor: white,
         systemNavigationBarIconBrightness: Brightness.dark,
         statusBarIconBrightness: Brightness.dark));
-    return Container();
+    return LoginScreen();
   }
 }

@@ -58,4 +58,4 @@ Map<int, Color> getSwatch(Color color) {
 }
 
 MaterialColor primaryMaterialColor =
-    MaterialColor(0xFFFF4654, getSwatch(primaryColorDark));
+    MaterialColor(0xFF1796FF, getSwatch(primaryColorDark));
