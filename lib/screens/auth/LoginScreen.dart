@@ -116,6 +116,16 @@ class _LoginScreenState extends State<LoginScreen> {
                         ],
                       ),
                       SizedBox(height: spaceS.h * 3.h),
+                      GestureDetector(
+                        onTap: () {
+                          //TODO: Navigate to phone verification screen
+                        },
+                        child: Text("Try with Phone Number?",
+                            style: Theme.of(context).textTheme.caption.copyWith(
+                                color: primaryColorDark,
+                                fontSize: caption.ssp)),
+                      ),
+                      SizedBox(height: spaceS.h),
                       Row(children: <Widget>[
                         Expanded(
                           child: Container(
@@ -144,7 +154,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               )),
                         ),
                       ]),
-                      SizedBox(height: spaceS.h * 2.h),
+                      SizedBox(height: spaceS.h),
                       Align(
                         alignment: Alignment.center,
                         child: CustomButton(
