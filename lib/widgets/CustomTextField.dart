@@ -36,6 +36,7 @@ class CustomTextField extends StatelessWidget {
       cursorColor: primaryColorDark,
       inputFormatters: inputFormatters,
       decoration: InputDecoration(
+        contentPadding: EdgeInsets.all(5),
         prefixText: prefixText ?? "",
         prefixStyle: TextStyle(color: black, fontSize: 18.ssp),
         labelText: labelText,

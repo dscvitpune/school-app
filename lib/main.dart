@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:schoolApp/screens/auth/LoginScreen.dart';
 import 'package:schoolApp/screens/auth/PhoneVerificationScreen.dart';
+import 'package:schoolApp/screens/auth/SignupScreen.dart';
 import 'package:schoolApp/utils/constant.dart';
 
 void main() {
@@ -27,6 +28,6 @@ class MyApp extends StatelessWidget {
         systemNavigationBarColor: white,
         systemNavigationBarIconBrightness: Brightness.dark,
         statusBarIconBrightness: Brightness.dark));
-    return LoginScreen();
+    return SignupScreen();
   }
 }
