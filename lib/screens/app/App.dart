@@ -71,15 +71,15 @@ class _AppState extends State<App> {
                     size: 28.h,
                   )),
               BottomNavigationBarItem(
-                  title: Text("Notices"),
+                  title: Text("Classes"),
                   icon: Icon(
-                    Icons.assignment,
+                    Icons.class_,
                     size: 28.h,
                   )),
               BottomNavigationBarItem(
-                  title: Text("Profile"),
+                  title: Text("Academics"),
                   icon: Icon(
-                    Icons.assignment_ind,
+                    Icons.assignment,
                     size: 28.h,
                   )),
             ],
