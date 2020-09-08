@@ -29,7 +29,15 @@ class _LoginScreenState extends State<LoginScreen> {
           child: Column(
             children: [
               CustomAppBar(
-                title: "School App",
+                title: Text(
+                  "School App",
+                  style: Theme.of(context).textTheme.headline6.copyWith(
+                        color: black,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: '.SF UI Display',
+                        fontSize: headline6.ssp,
+                      ),
+                ),
                 actions: <Widget>[
                   GestureDetector(
                     onTap: () {

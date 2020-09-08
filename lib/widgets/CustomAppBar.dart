@@ -4,11 +4,10 @@ import 'package:schoolApp/utils/constant.dart';
 
 class CustomAppBar extends StatelessWidget {
   final Widget leading;
-  final String title;
+  final Widget title;
   final List<Widget> actions;
 
-  const CustomAppBar(
-      {Key key, this.leading, @required this.title, this.actions})
+  const CustomAppBar({Key key, this.leading, this.title, this.actions})
       : super(key: key);
 
   @override
@@ -36,15 +35,7 @@ class CustomAppBar extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             leading ?? Container(),
-            Text(
-              title,
-              style: Theme.of(context).textTheme.headline6.copyWith(
-                    color: black,
-                    fontWeight: FontWeight.bold,
-                    fontFamily: '.SF UI Display',
-                    fontSize: headline6.ssp,
-                  ),
-            ),
+            title ?? Container(),
             Spacer(),
             actions != null
                 ? Row(

@@ -46,7 +46,15 @@ class _PhoneVerificationScreenState extends State<PhoneVerificationScreen> {
                     size: 24.ssp,
                   ),
                 ),
-                title: "School App",
+                title: Text(
+                  "School App",
+                  style: Theme.of(context).textTheme.headline6.copyWith(
+                        color: black,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: '.SF UI Display',
+                        fontSize: headline6.ssp,
+                      ),
+                ),
               ),
               SizedBox(height: spaceS.h * 2.h),
               Container(
