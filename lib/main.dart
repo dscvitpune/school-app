@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:schoolApp/screens/app/App.dart';
 import 'package:schoolApp/screens/app/AttendanceScreen.dart';
 import 'package:schoolApp/screens/app/CalenderScreen.dart';
+import 'package:schoolApp/screens/app/ClassScreen.dart';
 import 'package:schoolApp/screens/app/NoticesScreen.dart';
 import 'package:schoolApp/screens/app/ProfileScreen.dart';
 import 'package:schoolApp/screens/app/QuizScreen.dart';

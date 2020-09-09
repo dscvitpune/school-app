@@ -59,3 +59,21 @@ Map<int, Color> getSwatch(Color color) {
 
 MaterialColor primaryMaterialColor =
     MaterialColor(0xFF1796FF, getSwatch(primaryColorDark));
+
+//Mihir's constant file
+
+const dashboard_stats_background = const Color(0xFFE7E9EE);
+const dashboard_date = const Color(0xFF7E7E7E);
+const dasboard_name = const Color(0xFF384E70);
+const dashboard_active_blue = const Color(0xFF0068FF);
+const dashboard_active_blue_shadow = const Color(0xFF0068FF);
+const profile_pic_background = const Color(0xFFCDE7FB);
+
+const course_card_red = const Color(0xFFF16369);
+const course_card_blue = const Color(0xFF719DE3);
+const course_card_green = const Color(0xFF6AD469);
+const course_card_marron = const Color(0xFFD78DAA);
+const course_card_yellow = const Color(0xFFFFD46D);
+const course_card_orange = const Color(0xFFFFA77C);
+
+const transparent_overlay = const Color(0x00000000);
