@@ -176,12 +176,14 @@ class AttendanceScreen extends StatelessWidget {
                                   title: "Science",
                                   subtitle: "7/10",
                                   progressValue: 0.92,
+                                  backgroundColor: course_card_blue,
                                 ),
                                 Spacer(),
                                 SubjectCard(
                                   title: "Mathematics",
                                   subtitle: "8/7",
                                   progressValue: 0.99,
+                                  backgroundColor: course_card_green,
                                 ),
                               ],
                             ),
@@ -191,15 +193,17 @@ class AttendanceScreen extends StatelessWidget {
                             Row(
                               children: [
                                 SubjectCard(
-                                  title: "English",
+                                  title: "Chemistry",
                                   subtitle: "6/9",
                                   progressValue: 0.91,
+                                  backgroundColor: course_card_orange,
                                 ),
                                 Spacer(),
                                 SubjectCard(
-                                  title: "Science",
+                                  title: "Physics",
                                   subtitle: "7/10",
                                   progressValue: 0.92,
+                                  backgroundColor: course_card_yellow,
                                 ),
                               ],
                             )

@@ -5,8 +5,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class SubjectCard extends StatelessWidget {
   final String title, subtitle;
   final double progressValue;
+  final Color backgroundColor;
 
-  const SubjectCard({Key key, this.title, this.subtitle, this.progressValue})
+  const SubjectCard(
+      {Key key,
+      this.title,
+      this.subtitle,
+      this.progressValue,
+      this.backgroundColor})
       : super(key: key);
 
   @override
@@ -15,7 +21,7 @@ class SubjectCard extends StatelessWidget {
       width: 180.w,
       height: 230.h,
       decoration: BoxDecoration(
-        color: white,
+        color: backgroundColor ?? black,
         borderRadius: BorderRadius.all(
           Radius.circular(20.w),
         ),
@@ -43,7 +49,7 @@ class SubjectCard extends StatelessWidget {
             Text(
               title,
               style: Theme.of(context).textTheme.headline6.copyWith(
-                    color: black,
+                    color: white,
                     fontSize: headline6.ssp,
                     fontWeight: FontWeight.bold,
                   ),
@@ -53,7 +59,7 @@ class SubjectCard extends StatelessWidget {
             Text(
               subtitle,
               style: Theme.of(context).textTheme.headline6.copyWith(
-                    color: black,
+                    color: white,
                     fontFamily: '.SF UI Display',
                     fontSize: headline6.ssp,
                   ),
@@ -66,6 +72,7 @@ class SubjectCard extends StatelessWidget {
                 SizedBox(
                   width: 70.w,
                   child: LinearProgressIndicator(
+                    valueColor: AlwaysStoppedAnimation<Color>(white),
                     minHeight: 6.h,
                     backgroundColor: lightGrey,
                     value: 0.84,
@@ -77,7 +84,7 @@ class SubjectCard extends StatelessWidget {
                 Text(
                   "${progressValue * 100}%",
                   style: Theme.of(context).textTheme.subtitle1.copyWith(
-                        color: black,
+                        color: white,
                         fontSize: subtitle1.ssp,
                         fontWeight: FontWeight.bold,
                       ),
