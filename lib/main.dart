@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:schoolApp/screens/app/App.dart';
 import 'package:schoolApp/screens/app/AttendanceScreen.dart';
+import 'package:schoolApp/screens/app/CalenderScreen.dart';
 import 'package:schoolApp/screens/app/NoticesScreen.dart';
 import 'package:schoolApp/screens/app/ProfileScreen.dart';
 import 'package:schoolApp/screens/auth/LoginScreen.dart';
@@ -27,6 +28,7 @@ void main() {
         '/profile': (context) => ProfileScreen(),
         '/notices': (context) => NoticesScreen(),
         '/attendance': (context) => AttendanceScreen(),
+        '/calender': (context) => CustomAgenda(),
       },
       home: MyApp()));
 }
@@ -42,6 +44,6 @@ class MyApp extends StatelessWidget {
         systemNavigationBarColor: white,
         systemNavigationBarIconBrightness: Brightness.dark,
         statusBarIconBrightness: Brightness.dark));
-    return LoginScreen();
+    return App();
   }
 }

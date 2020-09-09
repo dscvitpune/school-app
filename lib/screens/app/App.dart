@@ -43,7 +43,9 @@ class _AppState extends State<App> {
         width: 65.0.w,
         child: FittedBox(
           child: FloatingActionButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, '/calender');
+            },
             child: Icon(Icons.calendar_today),
             backgroundColor: primaryColorDark,
           ),
