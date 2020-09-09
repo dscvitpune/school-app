@@ -96,14 +96,16 @@ class CardView extends StatelessWidget {
                   SizedBox(
                     height: spaceM.w,
                   ),
-                  Text(
-                    "View details",
-                    style: Theme.of(context).textTheme.subtitle2.copyWith(
-                          color: primaryColorDark,
-                          fontSize: subtitle2.ssp,
-                          fontWeight: FontWeight.bold,
-                        ),
-                  ),
+                  onPress != null
+                      ? Text(
+                          "View details",
+                          style: Theme.of(context).textTheme.subtitle2.copyWith(
+                                color: primaryColorDark,
+                                fontSize: subtitle2.ssp,
+                                fontWeight: FontWeight.bold,
+                              ),
+                        )
+                      : Container(),
                 ],
               ),
               Spacer(),
