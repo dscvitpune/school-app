@@ -11,6 +11,7 @@ class QuizScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: backgroundColor,
       resizeToAvoidBottomPadding: false,
       body: AnnotatedRegion<SystemUiOverlayStyle>(
           value: SystemUiOverlayStyle.dark,
@@ -20,7 +21,7 @@ class QuizScreen extends StatelessWidget {
 }
 
 class Mycard extends StatelessWidget {
-  final MaterialColor colors;
+  final Color colors;
   final String topic;
   final String marks;
   final String subject;
@@ -35,69 +36,98 @@ class Mycard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-      elevation: 5,
+    return Container(
+      decoration: BoxDecoration(
+        color: white,
+        borderRadius: BorderRadius.vertical(
+          bottom: Radius.circular(25.w),
+          top: Radius.circular(25.w),
+        ),
+        boxShadow: [
+          BoxShadow(
+            color: darkBlack.withOpacity(0.04),
+            spreadRadius: 0,
+            blurRadius: 24,
+            offset: Offset(0, 8.h),
+          ),
+        ],
+      ),
       child: InkWell(
         splashColor: Colors.blue.withAlpha(30),
         child: Container(
           decoration: BoxDecoration(
-              color: Color(0xFFF4F6F8),
-              borderRadius: BorderRadius.all(Radius.circular(20))),
-          padding: EdgeInsets.all(10),
-          width: 200.0,
+            borderRadius: BorderRadius.vertical(
+              bottom: Radius.circular(25.w),
+              top: Radius.circular(25.w),
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: darkBlack.withOpacity(0.04),
+                spreadRadius: 0,
+                blurRadius: 24,
+                offset: Offset(0, 8.h),
+              ),
+            ],
+            color: white,
+            // borderRadius: BorderRadius.all(Radius.circular(20)),
+          ),
+          padding: EdgeInsets.all(10.ssp),
+          width: 200.0.w,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               Row(
                 children: <Widget>[
                   SizedBox(
-                    width: 10,
+                    width: 10.w,
                   ),
                   new IconTheme(
-                    data: new IconThemeData(color: Color(0xFF88C693), size: 30),
+                    data: new IconThemeData(color: colors, size: 30),
                     child: new Icon(Icons.event_note),
                   ),
                   SizedBox(
-                    width: 25,
+                    width: 25.w,
                   ),
                   Text(
                     subject,
                     textAlign: TextAlign.center,
-                    style: TextStyle(color: Color(0xFF88C693), fontSize: 20),
+                    style: TextStyle(
+                        color: colors,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20.ssp),
                   ),
                 ],
               ),
               SizedBox(
-                height: 30,
+                height: 30.h,
               ),
               Row(children: <Widget>[
-                SizedBox(width: 10),
+                SizedBox(width: 10.w),
                 Text(
                   topic,
                   style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 20.ssp,
                   ),
                   textAlign: TextAlign.left,
                 )
               ]),
               SizedBox(
-                height: 10,
+                height: 10.h,
               ),
               Row(
                 children: <Widget>[
-                  SizedBox(width: 10),
+                  SizedBox(width: 10.w),
                   Text(
                     marks + ' marks',
                     style: TextStyle(
                       color: Colors.grey,
-                      fontSize: 15,
+                      fontSize: 15.ssp,
                     ),
                   ),
                 ],
               ),
               SizedBox(
-                height: 30,
+                height: 30.h,
               ),
               status == 1
                   ? (FlatButton(
@@ -108,16 +138,16 @@ class Mycard extends StatelessWidget {
                             data: new IconThemeData(color: Colors.orange),
                             child: new Icon(
                               Icons.play_circle_filled,
-                              size: 40,
+                              size: 40.ssp,
                             ),
                           ),
                           SizedBox(
-                            width: 20,
+                            width: 20.w,
                           ),
                           Text(
                             'Start',
-                            style:
-                                TextStyle(fontSize: 20, color: Colors.orange),
+                            style: TextStyle(
+                                fontSize: 20.ssp, color: Colors.orange),
                           ),
                         ],
                       )))
@@ -129,18 +159,20 @@ class Mycard extends StatelessWidget {
                             data: new IconThemeData(color: Colors.blue),
                             child: new Icon(
                               Icons.https,
-                              size: 40,
+                              size: 40.ssp,
                             ),
                           ),
                           SizedBox(
-                            width: 20,
+                            width: 20.w,
                           ),
                           Text(
                             'Upcoming..',
-                            style: TextStyle(fontSize: 15, color: Colors.blue),
+                            style:
+                                TextStyle(fontSize: 15.ssp, color: Colors.blue),
                           ),
                         ],
-                      ))
+                      ),
+                    ),
             ],
           ),
         ),
@@ -158,7 +190,8 @@ class MyStatelessWidget extends StatelessWidget {
     return Center(
         child: SingleChildScrollView(
       child: Container(
-        padding: EdgeInsets.all(10),
+        color: backgroundColor,
+        padding: EdgeInsets.all(10.ssp),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
@@ -173,47 +206,57 @@ class MyStatelessWidget extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 12,
+              height: 12.h,
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 20.h),
             Row(children: <Widget>[
               SizedBox(
-                width: 12,
+                width: 12.w,
               ),
               Text(
                 'Upcoming Tests',
                 style: TextStyle(
-                  fontSize: 25,
-                  fontFamily: 'Roboto',
+                  fontSize: 25.ssp,
                   fontWeight: FontWeight.bold,
                 ),
                 textAlign: TextAlign.left,
               )
             ]),
             Container(
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(20))),
-                padding: EdgeInsets.all(8),
-                height: 250.0,
-                child: ListView(
-                    scrollDirection: Axis.horizontal,
-                    padding: EdgeInsets.all(8),
-                    children: <Widget>[
-                      Mycard(Colors.red, 'Fractions', '50', 'Maths', 1),
-                      Mycard(Colors.red, 'Grammar', '50', 'English', 1),
-                      Mycard(Colors.red, 'Solids', '50', 'Science', 0),
-                    ])),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(20))),
+              padding: EdgeInsets.all(8.ssp),
+              height: 250.0.h,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                padding: EdgeInsets.all(8.ssp),
+                children: <Widget>[
+                  Mycard(course_card_green, 'Fractions', '50', 'Maths', 1),
+                  SizedBox(
+                    width: spaceM.w,
+                  ),
+                  Mycard(course_card_orange, 'Grammar', '50', 'English', 1),
+                  SizedBox(
+                    width: spaceM.w,
+                  ),
+                  Mycard(course_card_red, 'Solids', '50', 'Science', 0),
+                  SizedBox(
+                    width: spaceM.w,
+                  ),
+                ],
+              ),
+            ),
             SizedBox(
-              height: 20,
+              height: spaceM.h * 2.h,
             ),
             Row(children: <Widget>[
               SizedBox(
-                width: 12,
+                width: 12.w,
               ),
               Text(
                 'Past Scores',
                 style: TextStyle(
-                  fontSize: 25,
+                  fontSize: 25.ssp,
                   fontWeight: FontWeight.bold,
                 ),
                 textAlign: TextAlign.left,
