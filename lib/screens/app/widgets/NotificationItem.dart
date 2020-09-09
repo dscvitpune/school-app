@@ -47,7 +47,6 @@ class NotificationItem extends StatelessWidget {
               subtitle,
               style: Theme.of(context).textTheme.subtitle2.copyWith(
                     color: grey,
-                    fontWeight: FontWeight.bold,
                     fontSize: subtitle2.ssp,
                   ),
             ),
