@@ -4,9 +4,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class NotificationItem extends StatelessWidget {
   final String title, subtitle;
+  final bool isAttachmentAvailable;
 
   const NotificationItem(
-      {Key key, @required this.title, @required this.subtitle})
+      {Key key,
+      @required this.title,
+      @required this.subtitle,
+      this.isAttachmentAvailable = true})
       : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -53,14 +57,16 @@ class NotificationItem extends StatelessWidget {
             SizedBox(
               height: spaceS.h,
             ),
-            Text(
-              "Click to view attachment",
-              style: Theme.of(context).textTheme.subtitle2.copyWith(
-                    color: primaryColorDark,
-                    fontWeight: FontWeight.bold,
-                    fontSize: subtitle2.ssp,
-                  ),
-            ),
+            isAttachmentAvailable
+                ? Text(
+                    "Click to view attachment",
+                    style: Theme.of(context).textTheme.subtitle2.copyWith(
+                          color: primaryColorDark,
+                          fontWeight: FontWeight.bold,
+                          fontSize: subtitle2.ssp,
+                        ),
+                  )
+                : Container(),
           ],
         ),
       ),
