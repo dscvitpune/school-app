@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:schoolApp/utils/constant.dart';
 import 'package:schoolApp/widgets/CustomAppBar.dart';
@@ -26,73 +27,80 @@ class ScheduleExample extends State<CustomAgenda> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Container(
-            width: MediaQuery.of(context).size.width,
-            decoration: BoxDecoration(
-              color: white,
-              borderRadius: BorderRadius.vertical(
-                bottom: Radius.circular(25.w),
-              ),
-              boxShadow: [
-                BoxShadow(
-                  color: darkBlack.withOpacity(0.04),
-                  spreadRadius: 0,
-                  blurRadius: 24,
-                  offset: Offset(0, 8.h),
+      backgroundColor: backgroundColor,
+      body: AnnotatedRegion<SystemUiOverlayStyle>(
+        value: SystemUiOverlayStyle.dark,
+        child: SafeArea(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Container(
+                width: MediaQuery.of(context).size.width,
+                decoration: BoxDecoration(
+                  color: white,
+                  borderRadius: BorderRadius.vertical(
+                    bottom: Radius.circular(25.w),
+                  ),
+                  boxShadow: [
+                    BoxShadow(
+                      color: darkBlack.withOpacity(0.04),
+                      spreadRadius: 0,
+                      blurRadius: 24,
+                      offset: Offset(0, 8.h),
+                    ),
+                  ],
                 ),
-              ],
-            ),
-            child: Padding(
-              padding: EdgeInsets.symmetric(
-                  horizontal: paddingL.w - paddingS.w, vertical: paddingL.h),
-              child: Stack(
-                children: [
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: GestureDetector(
-                      onTap: () {
-                        //TODO: Go Back
-                        Navigator.of(context).pop();
-                      },
-                      child: Icon(
-                        Icons.keyboard_backspace,
-                        size: 28.w,
-                      ),
-                    ),
-                  ),
-                  Align(
-                    alignment: Alignment.center,
-                    child: Text(
-                      "Your schedule",
-                      style: Theme.of(context).textTheme.headline5.copyWith(
-                            color: black,
-                            fontWeight: FontWeight.bold,
-                            fontFamily: '.SF UI Display',
-                            fontSize: headline5.ssp,
+                child: Padding(
+                  padding: EdgeInsets.symmetric(
+                      horizontal: paddingL.w - paddingS.w,
+                      vertical: paddingL.h),
+                  child: Stack(
+                    children: [
+                      Align(
+                        alignment: Alignment.centerLeft,
+                        child: GestureDetector(
+                          onTap: () {
+                            //TODO: Go Back
+                            Navigator.of(context).pop();
+                          },
+                          child: Icon(
+                            Icons.keyboard_backspace,
+                            size: 28.w,
                           ),
-                    ),
+                        ),
+                      ),
+                      Align(
+                        alignment: Alignment.center,
+                        child: Text(
+                          "Your schedule",
+                          style: Theme.of(context).textTheme.headline5.copyWith(
+                                color: black,
+                                fontWeight: FontWeight.bold,
+                                fontFamily: '.SF UI Display',
+                                fontSize: headline5.ssp,
+                              ),
+                        ),
+                      ),
+                    ],
                   ),
-                ],
+                ),
               ),
-            ),
-          ),
-          SizedBox(height: 2.h * spaceM.h),
-          Expanded(
-            child: Padding(
-              padding: EdgeInsets.symmetric(
-                  vertical: paddingM.h, horizontal: paddingM.w),
-              child: SfCalendar(
-                view: _calendarView,
-                monthViewSettings: MonthViewSettings(showAgenda: true),
-                dataSource: getCalendarDataSource(),
-                onTap: calendarTapped,
+              SizedBox(height: 2.h * spaceM.h),
+              Expanded(
+                child: Padding(
+                  padding: EdgeInsets.symmetric(
+                      vertical: paddingM.h, horizontal: paddingM.w),
+                  child: SfCalendar(
+                    view: _calendarView,
+                    monthViewSettings: MonthViewSettings(showAgenda: true),
+                    dataSource: getCalendarDataSource(),
+                    onTap: calendarTapped,
+                  ),
+                ),
               ),
-            ),
+            ],
           ),
-        ],
+        ),
       ),
     );
   }
