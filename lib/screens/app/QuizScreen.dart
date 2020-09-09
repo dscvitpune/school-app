@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:schoolApp/utils/constant.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class QuizScreen extends StatelessWidget {
   static const String _title = 'Quiz Sec ';
@@ -159,10 +162,15 @@ class MyStatelessWidget extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            ClipRRect(
-              borderRadius: BorderRadius.all(Radius.circular(20)),
-              child: Image.network('https://i.ibb.co/GC152gc/givetest.png',
-                  height: 230),
+            SizedBox(
+              height: spaceM.h,
+            ),
+            Container(
+              child: SvgPicture.asset(
+                'assets/images/academics_illustration.svg',
+                height: 200.0.h,
+                width: 200.0.h,
+              ),
             ),
             SizedBox(
               height: 12,
