@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:schoolApp/screens/app/DashboardScreen.dart';
+import 'package:schoolApp/screens/app/QuizScreen.dart';
 import 'package:schoolApp/utils/constant.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -16,7 +17,7 @@ class _AppState extends State<App> {
     } else if (index == 1) {
       return Container();
     } else if (index == 2) {
-      return Container();
+      return QuizScreen();
     } else {
       return Container();
     }

@@ -6,6 +6,7 @@ import 'package:schoolApp/screens/app/AttendanceScreen.dart';
 import 'package:schoolApp/screens/app/CalenderScreen.dart';
 import 'package:schoolApp/screens/app/NoticesScreen.dart';
 import 'package:schoolApp/screens/app/ProfileScreen.dart';
+import 'package:schoolApp/screens/app/QuizScreen.dart';
 import 'package:schoolApp/screens/auth/LoginScreen.dart';
 import 'package:schoolApp/screens/auth/PhoneVerificationScreen.dart';
 import 'package:schoolApp/screens/auth/SignupScreen.dart';
