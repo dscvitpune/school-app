@@ -15,104 +15,105 @@ Widget Course_Cards(
     onTap: () {
       print("Pressed: " + subject);
     },
-    child: Container(
-      child: Column(
-        children: [
-          Padding(
-            padding: EdgeInsets.only(
-                top: 5.h, left: 20.w, right: 20.w, bottom: 10.h),
-            child: Card(
+    child: Column(
+      children: [
+        Padding(
+          padding:
+              EdgeInsets.only(top: 10.h, left: 20.w, right: 20.w, bottom: 10.h),
+          child: Container(
+            decoration: BoxDecoration(
               color: dashboard_stats_background,
-              elevation: 0,
-              shadowColor: dashboard_active_blue_shadow,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20.w)),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(20.w),
-                child: Container(
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      fit: BoxFit.cover,
-                      image: AssetImage(
-                        image_path,
-                      ),
+              borderRadius: BorderRadius.vertical(
+                bottom: Radius.circular(25.w),
+                top: Radius.circular(25.w),
+              ),
+              boxShadow: [
+                BoxShadow(
+                  color: darkBlack.withOpacity(0.04),
+                  spreadRadius: 0,
+                  blurRadius: 24,
+                  offset: Offset(0, 8.h),
+                ),
+              ],
+            ),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(20.w),
+              child: Container(
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    fit: BoxFit.cover,
+                    image: AssetImage(
+                      image_path,
                     ),
                   ),
-                  child: Column(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.all(5.w),
-                        child: Card(
-                          elevation: 0,
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20.w)),
-                          color: transparent_overlay,
-                          child: Padding(
-                            padding: EdgeInsets.only(top: 10.h, left: 10.w),
-                            child: Container(
-                              height: 150.h,
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
+                ),
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.all(paddingS.ssp),
+                      child: Padding(
+                        padding: EdgeInsets.only(top: 10.h, left: 10.w),
+                        child: Container(
+                          height: 150.h,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        subject,
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .headline5
-                                            .copyWith(
-                                              color: white,
-                                              fontSize: headline5.ssp,
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                      ),
-                                      Text(
-                                        description,
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .subtitle1
-                                            .copyWith(
-                                              color: white,
-                                              fontSize: subtitle1.ssp,
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                      ),
-                                      SizedBox(
-                                        height: 80.h,
-                                      ),
-                                      Text(
-                                        teacherName,
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .subtitle1
-                                            .copyWith(
-                                              color: black,
-                                              fontSize: subtitle1.ssp,
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                      ),
-                                    ],
+                                  Text(
+                                    subject,
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .headline5
+                                        .copyWith(
+                                          color: white,
+                                          fontSize: headline5.ssp,
+                                          fontWeight: FontWeight.bold,
+                                        ),
                                   ),
-                                  Deadline_Card(
-                                      deadline_date, deadline_month, context),
+                                  Text(
+                                    description,
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .subtitle1
+                                        .copyWith(
+                                          color: white,
+                                          fontSize: subtitle1.ssp,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                  ),
+                                  SizedBox(
+                                    height: 80.h,
+                                  ),
+                                  Text(
+                                    teacherName,
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .subtitle1
+                                        .copyWith(
+                                          color: black,
+                                          fontSize: subtitle1.ssp,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                  ),
                                 ],
                               ),
-                            ),
+                              Deadline_Card(
+                                  deadline_date, deadline_month, context),
+                            ],
                           ),
                         ),
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
             ),
           ),
-        ],
-      ),
+        ),
+        SizedBox(height: spaceM.h),
+      ],
     ),
   );
 }
