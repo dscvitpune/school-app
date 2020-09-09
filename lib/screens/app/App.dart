@@ -69,19 +69,49 @@ class _AppState extends State<App> {
             showUnselectedLabels: false,
             items: <BottomNavigationBarItem>[
               BottomNavigationBarItem(
-                  title: Text("Dashboard"),
+                  activeIcon: Icon(
+                    Icons.widgets,
+                    size: 28.h,
+                    color: primaryColorDark,
+                  ),
+                  title: Text(
+                    "Dashboard",
+                    style: TextStyle(
+                      color: primaryColorDark,
+                    ),
+                  ),
                   icon: Icon(
                     Icons.widgets,
                     size: 28.h,
                   )),
               BottomNavigationBarItem(
-                  title: Text("Classes"),
+                  activeIcon: Icon(
+                    Icons.class_,
+                    size: 28.h,
+                    color: course_card_green,
+                  ),
+                  title: Text(
+                    "Classes",
+                    style: TextStyle(
+                      color: course_card_green,
+                    ),
+                  ),
                   icon: Icon(
                     Icons.class_,
                     size: 28.h,
                   )),
               BottomNavigationBarItem(
-                  title: Text("Academics"),
+                  activeIcon: Icon(
+                    Icons.assignment,
+                    size: 28.h,
+                    color: course_card_orange,
+                  ),
+                  title: Text(
+                    "Academics",
+                    style: TextStyle(
+                      color: course_card_orange,
+                    ),
+                  ),
                   icon: Icon(
                     Icons.assignment,
                     size: 28.h,
