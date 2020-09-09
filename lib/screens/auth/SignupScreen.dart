@@ -43,6 +43,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   GestureDetector(
                     onTap: () {
                       print("Login");
+                      Navigator.pushNamed(context, '/login');
                     },
                     child: Text(
                       "Login",
@@ -134,6 +135,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             ),
                             onPress: () {
                               print("Signup");
+                              Navigator.pushNamed(context, '/app');
                             },
                             isDisable: email.length != 0 &&
                                     password.length >= 8 &&

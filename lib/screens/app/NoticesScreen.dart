@@ -6,75 +6,73 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class NoticesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        backgroundColor: backgroundColor,
-        body: Padding(
-          padding: EdgeInsets.only(
-              top: paddingL.h, right: paddingM.w, left: paddingM.w),
-          child: Column(
-            children: [
-              Row(
-                children: [
-                  GestureDetector(
-                    onTap: () {
-                      //TODO: Go Back
-                      print("Go back");
-                    },
-                    child: Icon(
-                      Icons.keyboard_backspace,
-                      size: 28.w,
-                    ),
-                  ),
-                  SizedBox(width: spaceM.w),
-                  Text(
-                    "Notice Board",
-                    style: Theme.of(context).textTheme.headline5.copyWith(
-                          color: black,
-                          fontSize: headline5.ssp,
-                          fontWeight: FontWeight.bold,
-                        ),
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: spaceM.h * 3.h,
-              ),
-              Expanded(
-                child: SingleChildScrollView(
-                  child: Column(
-                    children: [
-                      NotificationItem(
-                        title: "Anant Chaturdashi Holiday",
-                        subtitle:
-                            "The College will remain closed on Tuesday, 1st September, 2020 on account of Anant Chaturdashi.",
-                      ),
-                      SizedBox(
-                        height: spaceM.h,
-                      ),
-                      NotificationItem(
-                        title: "Exams are comming soon",
-                        subtitle:
-                            "MSE exam will be conducted on Friday, 15th September, 2020. Exam will be conducted online and on MCQ based of 30 marks.",
-                      ),
-                      SizedBox(
-                        height: spaceM.h,
-                      ),
-                      NotificationItem(
-                        isAttachmentAvailable: false,
-                        title: "Webinar on Artificial Intelligence",
-                        subtitle:
-                            "We are conducting webinar on AI technology on Saturday, 30 August, 2020. Attendance is compulsory",
-                      ),
-                      SizedBox(
-                        height: spaceM.h,
-                      ),
-                    ],
+    return Scaffold(
+      backgroundColor: backgroundColor,
+      body: Padding(
+        padding: EdgeInsets.only(
+            top: paddingL.h, right: paddingM.w, left: paddingM.w),
+        child: Column(
+          children: [
+            Row(
+              children: [
+                GestureDetector(
+                  onTap: () {
+                    //TODO: Go Back
+                    Navigator.of(context).pop();
+                  },
+                  child: Icon(
+                    Icons.keyboard_backspace,
+                    size: 28.w,
                   ),
                 ),
-              )
-            ],
-          ),
+                SizedBox(width: spaceM.w),
+                Text(
+                  "Notice Board",
+                  style: Theme.of(context).textTheme.headline5.copyWith(
+                        color: black,
+                        fontSize: headline5.ssp,
+                        fontWeight: FontWeight.bold,
+                      ),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: spaceM.h * 3.h,
+            ),
+            Expanded(
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    NotificationItem(
+                      title: "Anant Chaturdashi Holiday",
+                      subtitle:
+                          "The College will remain closed on Tuesday, 1st September, 2020 on account of Anant Chaturdashi.",
+                    ),
+                    SizedBox(
+                      height: spaceM.h,
+                    ),
+                    NotificationItem(
+                      title: "Exams are comming soon",
+                      subtitle:
+                          "MSE exam will be conducted on Friday, 15th September, 2020. Exam will be conducted online and on MCQ based of 30 marks.",
+                    ),
+                    SizedBox(
+                      height: spaceM.h,
+                    ),
+                    NotificationItem(
+                      isAttachmentAvailable: false,
+                      title: "Webinar on Artificial Intelligence",
+                      subtitle:
+                          "We are conducting webinar on AI technology on Saturday, 30 August, 2020. Attendance is compulsory",
+                    ),
+                    SizedBox(
+                      height: spaceM.h,
+                    ),
+                  ],
+                ),
+              ),
+            )
+          ],
         ),
       ),
     );

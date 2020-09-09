@@ -18,6 +18,16 @@ void main() {
         primarySwatch: primaryMaterialColor,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
+      routes: {
+        '/app': (context) => App(),
+        '/signup': (context) => SignupScreen(),
+        '/login': (context) => LoginScreen(),
+        '/phoneVerify': (context) => PhoneVerificationScreen(),
+        '/dashboard': (context) => App(),
+        '/profile': (context) => ProfileScreen(),
+        '/notices': (context) => NoticesScreen(),
+        '/attendance': (context) => AttendanceScreen(),
+      },
       home: MyApp()));
 }
 
@@ -32,6 +42,6 @@ class MyApp extends StatelessWidget {
         systemNavigationBarColor: white,
         systemNavigationBarIconBrightness: Brightness.dark,
         statusBarIconBrightness: Brightness.dark));
-    return AttendanceScreen();
+    return LoginScreen();
   }
 }

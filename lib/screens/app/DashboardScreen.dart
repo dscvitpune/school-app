@@ -47,6 +47,7 @@ class DashboardScreen extends StatelessWidget {
                 GestureDetector(
                     onTap: () {
                       //TODO: Go to profile screen
+                      Navigator.pushNamed(context, '/profile');
                     },
                     child: CircleAvatar(
                       radius: 30,
@@ -69,6 +70,7 @@ class DashboardScreen extends StatelessWidget {
                           CardView(
                             onPress: () {
                               print("Attendance click");
+                              Navigator.pushNamed(context, '/attendance');
                             },
                             title: "Attendance",
                             subTitle: "23/30",
@@ -99,15 +101,22 @@ class DashboardScreen extends StatelessWidget {
                                               fontWeight: FontWeight.bold),
                                     ),
                                     Spacer(),
-                                    Text(
-                                      "View more",
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .subtitle2
-                                          .copyWith(
-                                              color: primaryColorDark,
-                                              fontSize: subtitle2.ssp,
-                                              fontWeight: FontWeight.bold),
+                                    GestureDetector(
+                                      onTap: () {
+                                        print("Attendance click");
+                                        Navigator.pushNamed(
+                                            context, '/notices');
+                                      },
+                                      child: Text(
+                                        "View more",
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .subtitle2
+                                            .copyWith(
+                                                color: primaryColorDark,
+                                                fontSize: subtitle2.ssp,
+                                                fontWeight: FontWeight.bold),
+                                      ),
                                     ),
                                   ],
                                 ),

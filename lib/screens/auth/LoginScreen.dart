@@ -42,6 +42,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   GestureDetector(
                     onTap: () {
                       print("Signup");
+                      Navigator.pushNamed(context, '/signup');
                     },
                     child: Text(
                       "Sign Up",
@@ -116,6 +117,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             ),
                             onPress: () {
                               print("Login");
+                              Navigator.pushNamed(context, '/app');
                             },
                             isDisable: email.length != 0 && password.length >= 8
                                 ? false
@@ -127,6 +129,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       GestureDetector(
                         onTap: () {
                           //TODO: Navigate to phone verification screen
+                          Navigator.pushNamed(context, '/phoneVerify');
                         },
                         child: Text("Try with Phone Number?",
                             style: Theme.of(context).textTheme.caption.copyWith(

@@ -40,6 +40,7 @@ class _PhoneVerificationScreenState extends State<PhoneVerificationScreen> {
                 leading: CustomLeading(
                   onPress: () {
                     //TODO: Close screen function
+                    Navigator.of(context).pop();
                   },
                   child: Icon(
                     Icons.close,
@@ -170,6 +171,7 @@ class _PhoneVerificationScreenState extends State<PhoneVerificationScreen> {
                           } else {
                             //TODO: Verify code
                             print("OTP $otp");
+                            Navigator.pushNamed(context, '/app');
                           }
                         },
                         text: isPhoneEntered
