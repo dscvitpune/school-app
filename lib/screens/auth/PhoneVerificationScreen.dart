@@ -95,7 +95,7 @@ class _PhoneVerificationScreenState extends State<PhoneVerificationScreen> {
                           style: Theme.of(context)
                               .textTheme
                               .subtitle1
-                              .copyWith(color: grey),
+                              .copyWith(color: black.withOpacity(0.8)),
                         ),
                         SizedBox(height: spaceS.h * 2.h),
                         Stack(

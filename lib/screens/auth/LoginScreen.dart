@@ -138,10 +138,10 @@ class _LoginScreenState extends State<LoginScreen> {
                           child: Text("Try with Phone Number?",
                               style: Theme.of(context)
                                   .textTheme
-                                  .caption
+                                  .subtitle2
                                   .copyWith(
                                       color: primaryColorDark,
-                                      fontSize: caption.ssp)),
+                                      fontSize: subtitle2.ssp)),
                         ),
                         SizedBox(height: spaceS.h),
                         Row(children: <Widget>[

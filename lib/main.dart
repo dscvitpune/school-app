@@ -46,6 +46,6 @@ class MyApp extends StatelessWidget {
         systemNavigationBarColor: white,
         systemNavigationBarIconBrightness: Brightness.dark,
         statusBarIconBrightness: Brightness.dark));
-    return App();
+    return LoginScreen();
   }
 }

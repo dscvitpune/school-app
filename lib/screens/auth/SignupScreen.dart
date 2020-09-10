@@ -90,7 +90,7 @@ class _SignupScreenState extends State<SignupScreen> {
                         Text(
                           "Keep your financial data store to our server so that you can access from anywhere you want",
                           style: Theme.of(context).textTheme.subtitle1.copyWith(
-                                color: grey,
+                                color: black.withOpacity(0.8),
                                 fontSize: subtitle1.ssp,
                                 fontFamily: '.SF UI Display',
                               ),
