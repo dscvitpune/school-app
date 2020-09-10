@@ -12,6 +12,12 @@ const Color grey = Color(0xFFAEB1B8);
 const Color lightGrey = Color(0xFFCFD4E6);
 const Color googleColor = Color(0xFF1A73E8);
 
+const Color green = Color(0xFF73C700);
+const Color purple = Color(0xFFA237F3);
+const Color blue = Color(0xFF00A5FF);
+const Color pink = Color(0xFFFD4176);
+const Color orange = Color(0xFFFF9300);
+
 const double spaceS = 8.0;
 const double spaceM = 16.0;
 

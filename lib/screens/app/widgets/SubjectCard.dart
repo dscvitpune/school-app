@@ -6,13 +6,14 @@ class SubjectCard extends StatelessWidget {
   final String title, subtitle;
   final double progressValue;
   final Color backgroundColor;
-
+  final Widget icon;
   const SubjectCard(
       {Key key,
       this.title,
       this.subtitle,
       this.progressValue,
-      this.backgroundColor})
+      this.backgroundColor,
+      this.icon})
       : super(key: key);
 
   @override
@@ -27,7 +28,7 @@ class SubjectCard extends StatelessWidget {
         ),
         boxShadow: [
           BoxShadow(
-            color: darkBlack.withOpacity(0.04),
+            color: darkBlack.withOpacity(0.15),
             spreadRadius: 0,
             blurRadius: 24,
             offset: Offset(0, 8.h),
@@ -55,6 +56,7 @@ class SubjectCard extends StatelessWidget {
                   ),
             ),
             SizedBox(height: spaceM.h),
+            icon ?? Container(),
             Spacer(),
             Text(
               subtitle,
@@ -92,7 +94,7 @@ class SubjectCard extends StatelessWidget {
               ],
             ),
             SizedBox(
-              height: spaceM.h * 2.h,
+              height: spaceM.h,
             ),
           ],
         ),

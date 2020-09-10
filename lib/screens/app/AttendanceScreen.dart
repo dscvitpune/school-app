@@ -75,7 +75,7 @@ class AttendanceScreen extends StatelessWidget {
                               Container(
                                 width: 200.w,
                                 child: Text(
-                                  "All the attendance is monitored through online mode. If anyone have any issues about the stats please contact regarding faculty.",
+                                  "All the attendance is monitored through online mode.",
                                   style: Theme.of(context)
                                       .textTheme
                                       .subtitle2
@@ -176,14 +176,24 @@ class AttendanceScreen extends StatelessWidget {
                                   title: "Science",
                                   subtitle: "7/10",
                                   progressValue: 0.92,
-                                  backgroundColor: course_card_blue,
+                                  backgroundColor: blue,
+                                  icon: Image.asset(
+                                    "assets/images/subject_science_icon.png",
+                                    width: 60.w,
+                                    height: 60.h,
+                                  ),
                                 ),
                                 Spacer(),
                                 SubjectCard(
                                   title: "Mathematics",
                                   subtitle: "8/7",
                                   progressValue: 0.99,
-                                  backgroundColor: course_card_green,
+                                  backgroundColor: green,
+                                  icon: Image.asset(
+                                    "assets/images/subject_maths_icon.png",
+                                    width: 60.w,
+                                    height: 60.h,
+                                  ),
                                 ),
                               ],
                             ),
@@ -196,19 +206,30 @@ class AttendanceScreen extends StatelessWidget {
                                   title: "Chemistry",
                                   subtitle: "6/9",
                                   progressValue: 0.91,
-                                  backgroundColor: course_card_orange,
+                                  backgroundColor: orange,
+                                  icon: Image.asset(
+                                    "assets/images/subject_chemistry_icon.png",
+                                    width: 60.w,
+                                    height: 60.h,
+                                  ),
                                 ),
                                 Spacer(),
                                 SubjectCard(
                                   title: "Physics",
                                   subtitle: "7/10",
                                   progressValue: 0.92,
-                                  backgroundColor: course_card_yellow,
+                                  backgroundColor: pink,
+                                  icon: Image.asset(
+                                    "assets/images/subject_physics_icon.png",
+                                    width: 60.w,
+                                    height: 60.h,
+                                  ),
                                 ),
                               ],
                             )
                           ],
-                        )
+                        ),
+                        SizedBox(height: spaceM),
                       ],
                     ),
                   ),

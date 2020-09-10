@@ -72,12 +72,12 @@ class _AppState extends State<App> {
                   activeIcon: Icon(
                     Icons.widgets,
                     size: 28.h,
-                    color: primaryColorDark,
+                    color: blue,
                   ),
                   title: Text(
                     "Dashboard",
                     style: TextStyle(
-                      color: primaryColorDark,
+                      color: blue,
                     ),
                   ),
                   icon: Icon(
@@ -88,12 +88,12 @@ class _AppState extends State<App> {
                   activeIcon: Icon(
                     Icons.class_,
                     size: 28.h,
-                    color: course_card_green,
+                    color: green,
                   ),
                   title: Text(
                     "Classes",
                     style: TextStyle(
-                      color: course_card_green,
+                      color: green,
                     ),
                   ),
                   icon: Icon(
@@ -104,12 +104,12 @@ class _AppState extends State<App> {
                   activeIcon: Icon(
                     Icons.assignment,
                     size: 28.h,
-                    color: course_card_orange,
+                    color: orange,
                   ),
                   title: Text(
                     "Academics",
                     style: TextStyle(
-                      color: course_card_orange,
+                      color: orange,
                     ),
                   ),
                   icon: Icon(
